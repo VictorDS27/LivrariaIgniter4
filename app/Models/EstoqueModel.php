@@ -13,4 +13,4 @@ class EstoqueModel extends Model
     public function getEstoque($id){
         return $this->asArray()->where(['id'=>$id])->first();
     }
-    }
+}

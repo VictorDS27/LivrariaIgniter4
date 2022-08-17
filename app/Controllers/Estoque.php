@@ -24,4 +24,9 @@ class Estoque extends ResourceController
         return $this->response->setJson($data);
     }
 
+    public function primeiros()
+    {
+        $data = $this->estoqueModel->findAll(3);
+        return $this->response->setJson($data);
+    }
 }

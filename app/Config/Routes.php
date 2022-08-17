@@ -37,6 +37,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('listar', 'Estoque::listar');
+$routes->get('primeiros', 'Estoque::primeiros');
 $routes->get('estoque/(:num)', 'Estoque::estoque/$1');
 
 /*
