@@ -39,7 +39,10 @@ $routes->get('/', 'Home::index');
 $routes->get('listar', 'Estoque::listar');
 $routes->get('primeiros', 'Estoque::primeiros');
 $routes->get('estoque/(:num)', 'Estoque::estoque/$1');
-
+$routes->post('gravar', 'Estoque::gravarProduto/$1');
+$routes->delete('delete/(:num)', 'Estoque::deletar/$1');
+$routes->put('atualizar/(:segment)', 'Estoque::atualizar/$1');
+$routes->patch('atualizar/(:segment)', 'Estoque::atualizar/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

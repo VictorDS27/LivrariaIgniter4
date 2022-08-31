@@ -29,4 +29,22 @@ class Estoque extends ResourceController
         $data = $this->estoqueModel->findAll(3);
         return $this->response->setJson($data);
     }
+
+    public function gravarProduto(){
+        $this->estoqueModel->save([
+            'nome' => $this->request->getPost('nome'),
+            'Autor' => $this->request->getPost('Autor'),
+            'Editora' => $this->request->getPost('Editora'),
+            'valor' => $this->request->getPost('valor')
+        ]);
+    }
+
+    public function deletar($id){
+        $this->estoqueModel->delete($id);
+    }
+
+    public function atualizar($id){
+        $data =  $this->request->getJSON();
+        $this->estoqueModel->update($id, $data);
+    }
 }
